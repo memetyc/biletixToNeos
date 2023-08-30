@@ -438,6 +438,71 @@ function linkMen(link){
 
 // SÖZLEŞME BİTİŞ
 
+//dolusepet.html start
 
+// koltuk bilgilerini gör js (sepet) 
+
+ function bilgiKoltuk(){
+let biletBilgi= document.getElementById("ticketInfo")
+if (biletBilgi){
+biletBilgi.addEventListener("click", function() {
+    var biletHidden = document.getElementById("biletHidden");
+
+    if (biletHidden.classList.contains("d-none")) {
+      biletHidden.classList.remove("d-none");
+    } else {
+      biletHidden.classList.add("d-none");
+    }
+  });
+}
+ }
+ bilgiKoltuk()
+
+  // koltuk bilgilerini gör js (sepet) dolusepet.html end
+  
+  //koltuk bilgilerini gör 950px responsive de çıkan için dolusepet.html start
+function koltukBilgi(){
+  let biletBilgiİki= document.getElementById("ticketInfo2")
+if (biletBilgiİki){
+  biletBilgiİki.addEventListener("click", function() {
+    var biletHiddenİki = document.getElementById("biletHiddenİki");
+
+    if (biletHiddenİki.classList.contains("d-none")) {
+      biletHiddenİki.classList.remove("d-none");
+    } else {
+      biletHiddenİki.classList.add("d-none");
+    }
+  });
+}
+}
+koltukBilgi()
+  //koltuk bilgilerini gör 950px responsive de çıkan için  end
+
+  // dolu sepet modal start
+  function BtnIcon(){
+  var sepetModalBox = document.getElementById("sepetModal");
+  var ModalBoxBtn = document.getElementById("sepetModalBoxBtn");
+  var sepetModalKapanBir = document.getElementsByClassName("sepetModalKapan")[0];
+  // buton-icona tıkladığında tıkladığında aç
+  if(ModalBoxBtn){
+    ModalBoxBtn.onclick = function() {
+    sepetModalBox.style.display = "block";
+  }
+  }
+  //modal dışında bir yere tıkladığında kapan
+  window.onclick = function(event) {
+    if (event.target == sepetModalBox) {
+      sepetModalBox.style.display = "none";
+    }
+  }
+  //X'e bastığında kapan
+  sepetModalKapanBir.onclick = function() {
+    sepetModalBox.style.display = "none";
+  }
+  }
+  BtnIcon()
+    // dolu sepet modal end
+   
+    //dolusepet.html end
 
 
