@@ -3159,3 +3159,165 @@ margin-top: 34px;
     /* Footer End */
 
     /* KURUCESME SAYFA END */
+
+/* BOŞ SEPET */
+.empty-basket-content{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.basket-image{
+    margin-left: 40%;
+}
+/*  boş seper end*/
+/*DOLU SEPET START */
+.ticket-count{
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+.bilet-ozet{
+padding: 5px 15px;
+background-color: #fff;
+box-shadow: #959da533 0 8px 24px;
+border-radius: 5px;
+}
+.zaman-sayac{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    padding-right: 10px;
+    width: 75px;
+    height: 25px;
+    background: #FAE5AA;
+    box-shadow: 0 0 20px #0000000d;
+    border-radius: 100px;
+    margin: 15px 0;
+}
+.ticket-span {
+  transform: translateX(0); 
+  bottom: 10px; 
+  left: 50%; 
+}
+.kirmizi-yuvarlak{
+   
+    margin-bottom: -80px;
+    left: 90%;
+ }
+ .bilet-bilgisi-2 {
+    display: none!important;
+ }
+ .kaldir-2 {
+    display: none!important;
+ }
+
+ .kaldirDivİki {
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
+    
+  }
+  
+  .kaldirBtnİki {
+    position: absolute;
+   
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+
+@media screen and (max-width: 1300px){
+.full-sepet{
+    margin: 0!important;
+    width: 100%!important;
+}
+
+
+.ticket-body{
+    width: 100%!important;
+    
+}
+.product-detail{
+    width: 100%!important;
+}
+.sanatci-ismi{
+    width: 100%!important;
+}
+.bilet-bilgisi{
+    width: 100%!important;
+}
+.ticket-short{
+    width: 100%!important;
+}
+.bilet-ozet{
+    width: 100%!important;
+}
+}
+
+@media screen and (max-width: 950px){
+    .dolu-sepetim{
+       width: 100%!important;
+    }
+    .full-sepet{
+        width: 100%!important;
+        margin: auto!important;
+        margin-top: 0px;
+    }
+    .ticket-short{
+        bottom: 0!important;
+        position: sticky!important;
+        width:100%!important;
+    }
+.sanatci-resim{
+    width: 100%!important;
+    height: 100%!important;
+    max-height: initial!important;
+}
+.product-detail{
+    display: flex;
+    flex-wrap: wrap!important;
+}
+.ticket-body{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%!important;
+}
+.kirmizi-yuvarlak{
+position: absolute!important;
+ height: 7%!important;
+ width: 4%!important;
+}
+.bilet-bilgisi-2 {
+    display: block!important;
+ }
+
+ .kaldir-2 {
+    display: block!important;
+ }
+ .bilet-bilgisi {
+    display: none;
+ }
+ .kaldir {
+    display: none;
+ }
+.biletix-event{
+    display: block!important;
+}
+.sepetim-ucret{
+    align-items: flex-start!important;
+    margin-top: 20px!important;
+}
+.sepetCheck{
+    margin-top: 0!important;
+}
+
+}
+@media screen and (max-width:650px){
+    .kirmizi-yuvarlak{
+    
+      height: 10%!important;
+      width: 8%!important;
+    }
+}
+
+/* DOLU SEPET END */
