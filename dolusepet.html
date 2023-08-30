@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/2817c57365.js" crossorigin="anonymous"></script>
+    <!-- bs -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+ <link rel="stylesheet" href="style.css">
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+<div class="container-lg    mt-5 full-sepet" style="font-family: Arial, Helvetica, sans-serif;">
+    
+    <div class="title d-flex">
+        <h2>Sepetim</h2>
+        <span class="ticket-count text-secondary  ">1 bilet</span>
+    </div>
+  <div class="row">
+    <div class="col-md-12 col-lg dolu-sepetim">
+<div class=" ticket-info  container-lg">
+    <p class="mt-2">Seçtiğin biletler geçici olarak senin için ayrıldı!</p>
+<div class="ticket-body  d-flex" >
+  <div class="ticket-span">
+        <img src="./img/dolusepet/2EP34_dargorsel.jpg" class="sanatci-resim" width="232px" height="130px"  alt="...">
+        <span class="border border-white border-1 rounded-circle bg-danger text-center text-white kirmizi-yuvarlak" style="width: 10%;  height:17% ;position: absolute; right:40px; bottom: 90px;" style="font-size: 15px;"> x1</span>
+    </div>
+
+    <div class="product-detail ">
+       
+        <div class=" sanatci-ismi d-flex justify-content-between align-items-center" style=" width: 450px">
+            
+        <h2>Sanatçı İsmi</h2>
+    
+        <div class=" kaldir" >
+            <button class="btn btn-link text-danger text-decoration-none border-0  bg-transparent"><img src="./img/dolusepet/red-trash-can-icon.svg" width="15px" height="20px" alt="Kaldır"> Kaldır</button>
+    </div>
+</div>
+
+
+<div class="biletix-event d-flex justify-content-between align-items-center mb-3" >
+    <span class=""><img src="./img/dolusepet/location_on_FILL0_wght400_GRAD0_opsz48.svg" width="17px" height="17px" alt="">Konum</span>
+    <span class=""><img src="./img/dolusepet/event_FILL0_wght400_GRAD0_opsz48.svg" width="17px" height="17px" alt="">Tarih</span>
+    <span><img src="./img/dolusepet/schedule_FILL0_wght400_GRAD0_opsz48.svg" width="17px" height="17px" alt="">Saat</span>
+    
+  
+    <div class="sepetim-ucret d-flex flex-column align-items-end">
+        <span class="product-price bw-bold fs-4 ">₺12345</span>
+        <p class="">Hizmet Bedeli:<span class="product-price">₺0</span> </p> 
+       
+    </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- bilet bilgi/  responsivede 950px'te gizleniyor-->
+<div class="bilet-bilgisi w-50 m-auto" >
+    <div class="ticket-info " >
+        <button class="border border-0"  id="ticketInfo" style="background-color: white;">
+        <span style="color: #0008ff;"><i class="fa-solid fa-chair" style="color: #0008ff;"></i>Koltuk Bilgilerini Gör</span>
+    </button>
+    
+        <div class="koltuk-detay d-none" id="biletHidden">
+            <p style="font-size: 20px;">Koltuk Numaraları(1)</p>
+            <Ul class="koltuk-bilgi">
+                <li>
+                   <h4 style="font-size: 14px;" class="fw-semibold">Tam(x1)</h4>
+                   <div class="koltuk-secim">
+                   <span style="font-size: 14px;" class="fw-semibold">Bölüm/Blok:</span><span>Normal Giriş</span>
+                </div>
+                <div class="koltuk secim">
+                   <span style="font-size: 14px;" class="fw-semibold">Sıra:</span><span style="font-size: 14px;" class="fw-semibold">Koltuk:</span>
+                </div>
+    
+                </li>
+            </Ul>
+    
+        </div>
+        
+    </div>
+
+
+
+</div>
+
+<!-- checkbox -->
+
+
+
+<div class="w-100 mt-3 sepetCheck">
+    
+    
+    <div class="form-check" style="color: #0008ff;">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+            Bilgilerim etkinlik organizatörü ile paylaşılabilir.
+        </label>
+        <button class="btn btn border-0" id="sepetModalBoxBtn"><span><i class="fa-solid fa-circle-info" style="color: #0008ff;"></i></span></button>
+      </div>
+    <!-- modal -->
+    <div class="modal sepetModal" id="sepetModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Bilgilerim etkinlik organizatörü ile paylaşılabilir.</h3>
+              <button type="button" class="btn-close sepetModalKapan" data-bs-dismiss="modal" aria-label="Close" ></button>
+            </div>
+            <div class="modal-body">
+              <p>Kişisel bilgilerimin etkinlik organizatörü ile (mekan, organizatör, sanatçı, takım gibi bu etkinliği düzenleyen veya etkinliğin bir parçası olan kurum veya şahıslar) güvenlik amaçlı ya da başkaca ticari amaçlarla paylaşılmasına ve bilgilerimin paylaşılacağı etkinlik sahibi organizatörün benimle iletişime geçmesine izin veriyorum. İlaveten, ticari elektronik iletinin içeriğinin ve gönderiye ilişkin diğer kayıtların gerektiğinde Bakanlığa sunulmak üzere Şirketiniz ya da onay verdiğim diğer ilgililer nezdinde kayıt altına alınarak saklanacağını biliyorum. Etkinlik organizatörünün gizlilik politikaları çerçevesinde, dilediğim herhangi bir zamanda, etkinlik organizatörünün benimle irtibata geçmemesini de isteyebilirim. Bu seçimi yaparken, Biletix Satış Politikaları ve Satış Sözleşmesi Kurallarını da dikkatlice okuduğumu belirtirim. (Bu seçim Biletix üyeliğiniz ile bağlantılı olan e-posta iletişimi ile alakalı değildir. Biletix üyelik seçimlerinizi dilediğiniz zaman Hesabım menüsünü kullanarak değiştirebilirsiniz.)</p>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+
+<!-- ! görünmez-responsive 950pxte görünecek olan  bilet bilgisi -->
+
+
+<div class="bilet-bilgisi-2 w-50 " >
+    <div class="ticket-info-2 " >
+        <button class="border border-0 mt-4 fw-bold"  id="ticketInfo2" style="background-color: white;">
+        <span style="color: black;"><img src="./img/dolusepet/confirmation_number_FILL0_wght400_GRAD0_opsz48.svg" width="20px" height="20px" alt="">Koltuk Bilgilerini Gör</span>
+    </button>
+    
+        <div class="koltuk-detay d-none" id="biletHiddenİki">
+            <p style="font-size: 20px;">Koltuk Numaraları(1)</p>
+            <Ul class="koltuk-bilgi">
+                <li>
+                   <h4 style="font-size: 14px;" class="fw-semibold">Tam(x1)</h4>
+                   <div class="koltuk-secim">
+                   <span style="font-size: 14px;" class="fw-semibold">Bölüm/Blok:</span><span>Normal Giriş</span>
+                </div>
+                <div class="koltuk secim">
+                   <span style="font-size: 14px;" class="fw-semibold">Sıra:</span><span style="font-size: 14px;" class="fw-semibold">Koltuk:</span>
+                </div>
+    
+                </li>
+            </Ul>
+    
+        </div>
+        
+    </div>
+
+
+
+</div>
+
+
+
+<div class=" kaldir-2 kaldirDivİki " >
+    <hr>
+    <button class="btn btn-link text-danger text-decoration-none border-0  bg-transparent kaldirBtnİki"><img src="./img/dolusepet/red-trash-can-icon.svg" width="15px" height="20px" alt="Kaldır"> Kaldır</button>
+</div>
+
+
+
+
+    <div class="general-info " style="color: #999999; font-size: 12px;">
+        <p>“Dijital Biletleriniz” başlığı ile gönderdiğimiz e-postada biletlerinizi hem PDF hem de karekod formatında bulabilirsiniz. Biletix üyeliği ile yaptığınız tüm işlemlerde, 'Hesabım' menüsü altındaki 'Biletlerim' sekmesinden de biletlerinize ulaşabileceğinizi hatırlatmak isteriz.</p>
+        <p>Etkinliğin girişinde, PDF biletinizi kullanacaksanız, her bir biletin ayrı bir sayfa olarak çıktısını alabileceğiniz gibi, biletlerinizi çıktı almadan, akıllı telefonunuz üzerinden göstererek de etkinliğe giriş yapabilirsiniz. Karekod ile giriş yapacaksanız, e-postanızdaki karekod linkini açıp, giriş sırasında gösterebilir ya da pass eklentisini mobil cihazınızdaki pass uygulamanızda açarak kullanabilirsiniz.</p>
+    </div>
+
+
+</div>
+    </div>
+
+
+<!-- bilet özet  white box -->
+
+
+<div class="col-md-4 ticket-short  " >
+    
+
+    <div class="bilet-ozet w-75 ms-2">
+        <div class="zaman-sayac">
+            <img src="./img/dolusepet/bg-orange-timer.svg" alt="">
+            <span>04.59</span>
+        </div>
+
+       <p class="fw-semibold text-uppercase mt-4 m-0" style="font-size: 14px;">Ödenecek Tutar</p>
+       <span class="total-price fw-bold " style="font-size: 24px;">₺123</span>
+
+   
+    <div class="summary-content mt-3 ">
+        <div class="d-grid gap-2 col-6 mx-auto w-100 ">
+            <button type="button" class="btn btn-primary border border-0 rounded-3 btn-lg " >Sepeti Onayla</button>
+            <button type="button" class="btn btn-light mt-2 text-primary border border-1 border-primary rounded-3 btn-lg">Alışverişe Devam Et</button>
+        </div>
+
+<div class="siparis-bedeli d-flex justify-content-between mt-2">
+    <span>Sipariş bedeli</span><span>₺123</span>
+</div>
+<div class="toplam-bilet d-flex justify-content-between mt-1 mb-3">
+   <span>Biletler(x Adet)</span>
+   <span>₺123</span>
+</div>
+
+    </div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+ 
+
+  <!-- bilet koltuk bilgi d-none-->
+ 
+
+<script src="script.js"></script>
+
+
+    <!-- bs -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
+
